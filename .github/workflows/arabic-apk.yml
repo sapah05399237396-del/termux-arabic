@@ -12,7 +12,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4
       - run: sdkmanager "platforms;android-36" "build-tools;36.0.0" "ndk;29.0.14206865"
       - run: ./gradlew --no-daemon :app:assembleDebug
       - uses: actions/upload-artifact@v4
